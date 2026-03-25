@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-25 08:28:19",
+    "dataset": "CIC IoMT 2024",
+    "train_samples": 31135,
+    "val_samples": 7865,
+    "test_samples": 5400,
+    "n_features": 36,
+    "n_classes": 18,
+    "classes": [
+      "ARP Spoofing",
+      "DDoS ICMP",
+      "DDoS Publish Flood",
+      "DDoS SYN",
+      "DDoS TCP",
+      "DDoS UDP",
+      "DoS Connect Flood",
+      "DoS ICMP",
+      "DoS Publish Flood",
+      "DoS SYN",
+      "DoS TCP",
+      "DoS UDP",
+      "Malformed Data",
+      "OS Scan",
+      "Ping Sweep",
+      "Port Scan",
+      "Recon VulScan",
+      "benign"
+    ]
+  },
+  "supervised_models": {
+    "model_1_xgboost": {
+      "type": "XGBoost",
+      "best_params": {
+        "n_estimators": 800,
+        "max_depth": 12,
+        "learning_rate": 0.008
+      },
+      "accuracy": 0.8835185185185185,
+      "macro_f1": 0.8725808888640205,
+      "per_class": {
+        "ARP Spoofing": {
+          "recall": 0.8066666666666666,
+          "precision": 0.7034883720930233,
+          "f1": 0.7515527950310559
+        },
+        "DDoS ICMP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS Publish Flood": {
+          "recall": 0.16,
+          "precision": 0.9230769230769231,
+          "f1": 0.2727272727272727
+        },
+        "DDoS SYN": {
+          "recall": 0.9933333333333333,
+          "precision": 0.9933333333333333,
+          "f1": 0.9933333333333333
+        },
+        "DDoS TCP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS UDP": {
+          "recall": 0.9933333333333333,
+          "precision": 0.9966555183946488,
+          "f1": 0.994991652754591
+        },
+        "DoS Connect Flood": {
+          "recall": 0.99,
+          "precision": 1.0,
+          "f1": 0.9949748743718593
+        },
+        "DoS ICMP": {
+          "recall": 0.9966666666666667,
+          "precision": 1.0,
+          "f1": 0.998330550918197
+        },
+        "DoS Publish Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 0.542649727767695,
+          "f1": 0.7027027027027027
+        },
+        "DoS SYN": {
+          "recall": 0.99,
+          "precision": 1.0,
+          "f1": 0.9949748743718593
+        },
+        "DoS TCP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DoS UDP": {
+          "recall": 1.0,
+          "precision": 0.9933774834437086,
+          "f1": 0.9966777408637874
+        },
+        "Malformed Data": {
+          "recall": 0.8733333333333333,
+          "precision": 0.9390681003584229,
+          "f1": 0.9050086355785838
+        },
+        "OS Scan": {
+          "recall": 0.85,
+          "precision": 0.8333333333333334,
+          "f1": 0.8415841584158416
+        },
+        "Ping Sweep": {
+          "recall": 0.9633333333333334,
+          "precision": 0.9088050314465409,
+          "f1": 0.9352750809061489
+        },
+        "Port Scan": {
+          "recall": 0.8866666666666667,
+          "precision": 0.8580645161290322,
+          "f1": 0.8721311475409836
+        },
+        "Recon VulScan": {
+          "recall": 0.5466666666666666,
+          "precision": 0.7354260089686099,
+          "f1": 0.627151051625239
+        },
+        "benign": {
+          "recall": 0.8566666666666667,
+          "precision": 0.7956656346749226,
+          "f1": 0.8250401284109149
+        }
+      }
+    },
+    "model_2_random_forest": {
+      "type": "Random Forest",
+      "best_params": {
+        "n_estimators": 600,
+        "min_samples_leaf": 1,
+        "max_depth": 30
+      },
+      "accuracy": 0.8729629629629629,
+      "macro_f1": 0.8614446018999011,
+      "per_class": {
+        "ARP Spoofing": {
+          "recall": 0.8233333333333334,
+          "precision": 0.6880222841225627,
+          "f1": 0.7496206373292867
+        },
+        "DDoS ICMP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS Publish Flood": {
+          "recall": 0.16666666666666666,
+          "precision": 0.9803921568627451,
+          "f1": 0.2849002849002849
+        },
+        "DDoS SYN": {
+          "recall": 0.99,
+          "precision": 0.9966442953020134,
+          "f1": 0.9933110367892977
+        },
+        "DDoS TCP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS UDP": {
+          "recall": 0.9833333333333333,
+          "precision": 1.0,
+          "f1": 0.9915966386554622
+        },
+        "DoS Connect Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 1.0,
+          "f1": 0.998330550918197
+        },
+        "DoS ICMP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DoS Publish Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 0.5446265938069217,
+          "f1": 0.7043580683156655
+        },
+        "DoS SYN": {
+          "recall": 0.9966666666666667,
+          "precision": 0.9966666666666667,
+          "f1": 0.9966666666666667
+        },
+        "DoS TCP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DoS UDP": {
+          "recall": 1.0,
+          "precision": 0.9836065573770492,
+          "f1": 0.9917355371900827
+        },
+        "Malformed Data": {
+          "recall": 0.93,
+          "precision": 0.8746081504702194,
+          "f1": 0.901453957996769
+        },
+        "OS Scan": {
+          "recall": 0.69,
+          "precision": 0.8448979591836735,
+          "f1": 0.7596330275229358
+        },
+        "Ping Sweep": {
+          "recall": 0.8666666666666667,
+          "precision": 0.9154929577464789,
+          "f1": 0.8904109589041096
+        },
+        "Port Scan": {
+          "recall": 0.9033333333333333,
+          "precision": 0.7591036414565826,
+          "f1": 0.8249619482496194
+        },
+        "Recon VulScan": {
+          "recall": 0.5033333333333333,
+          "precision": 0.7156398104265402,
+          "f1": 0.5909980430528375
+        },
+        "benign": {
+          "recall": 0.8666666666666667,
+          "precision": 0.7926829268292683,
+          "f1": 0.8280254777070064
+        }
+      }
+    },
+    "model_3_knn_lr_ensemble": {
+      "type": "KNN + Logistic Regression Voting",
+      "accuracy": 0.8124074074074074,
+      "macro_f1": 0.7990430131493831,
+      "per_class": {
+        "ARP Spoofing": {
+          "recall": 0.7366666666666667,
+          "precision": 0.5800524934383202,
+          "f1": 0.6490455212922174
+        },
+        "DDoS ICMP": {
+          "recall": 0.9666666666666667,
+          "precision": 0.9508196721311475,
+          "f1": 0.9586776859504132
+        },
+        "DDoS Publish Flood": {
+          "recall": 0.13,
+          "precision": 0.8297872340425532,
+          "f1": 0.22478386167146974
+        },
+        "DDoS SYN": {
+          "recall": 0.9466666666666667,
+          "precision": 0.8987341772151899,
+          "f1": 0.922077922077922
+        },
+        "DDoS TCP": {
+          "recall": 0.9733333333333334,
+          "precision": 0.9389067524115756,
+          "f1": 0.955810147299509
+        },
+        "DDoS UDP": {
+          "recall": 0.9666666666666667,
+          "precision": 0.7304785894206549,
+          "f1": 0.8321377331420373
+        },
+        "DoS Connect Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 0.9900662251655629,
+          "f1": 0.9933554817275747
+        },
+        "DoS ICMP": {
+          "recall": 0.9466666666666667,
+          "precision": 0.9659863945578231,
+          "f1": 0.9562289562289562
+        },
+        "DoS Publish Flood": {
+          "recall": 1.0,
+          "precision": 0.5300353356890459,
+          "f1": 0.6928406466512702
+        },
+        "DoS SYN": {
+          "recall": 0.9166666666666666,
+          "precision": 0.9450171821305842,
+          "f1": 0.9306260575296108
+        },
+        "DoS TCP": {
+          "recall": 0.9366666666666666,
+          "precision": 0.972318339100346,
+          "f1": 0.9541595925297114
+        },
+        "DoS UDP": {
+          "recall": 0.6433333333333333,
+          "precision": 0.9507389162561576,
+          "f1": 0.7673956262425448
+        },
+        "Malformed Data": {
+          "recall": 0.8233333333333334,
+          "precision": 0.8821428571428571,
+          "f1": 0.8517241379310345
+        },
+        "OS Scan": {
+          "recall": 0.49333333333333335,
+          "precision": 0.891566265060241,
+          "f1": 0.6351931330472103
+        },
+        "Ping Sweep": {
+          "recall": 0.9533333333333334,
+          "precision": 0.8719512195121951,
+          "f1": 0.910828025477707
+        },
+        "Port Scan": {
+          "recall": 0.87,
+          "precision": 0.696,
+          "f1": 0.7733333333333333
+        },
+        "Recon VulScan": {
+          "recall": 0.5333333333333333,
+          "precision": 0.6274509803921569,
+          "f1": 0.5765765765765766
+        },
+        "benign": {
+          "recall": 0.79,
+          "precision": 0.8061224489795918,
+          "f1": 0.797979797979798
+        }
+      }
+    },
+    "final_voting_ensemble": {
+      "type": "XGB + RF + KNN Voting",
+      "accuracy": 0.8774074074074074,
+      "macro_f1": 0.8671454039383393,
+      "per_class": {
+        "ARP Spoofing": {
+          "recall": 0.8366666666666667,
+          "precision": 0.6587926509186351,
+          "f1": 0.737151248164464
+        },
+        "DDoS ICMP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS Publish Flood": {
+          "recall": 0.16666666666666666,
+          "precision": 0.9259259259259259,
+          "f1": 0.2824858757062147
+        },
+        "DDoS SYN": {
+          "recall": 0.9933333333333333,
+          "precision": 0.9966555183946488,
+          "f1": 0.994991652754591
+        },
+        "DDoS TCP": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0
+        },
+        "DDoS UDP": {
+          "recall": 0.9833333333333333,
+          "precision": 1.0,
+          "f1": 0.9915966386554622
+        },
+        "DoS Connect Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 1.0,
+          "f1": 0.998330550918197
+        },
+        "DoS ICMP": {
+          "recall": 0.9966666666666667,
+          "precision": 1.0,
+          "f1": 0.998330550918197
+        },
+        "DoS Publish Flood": {
+          "recall": 0.9966666666666667,
+          "precision": 0.5446265938069217,
+          "f1": 0.7043580683156655
+        },
+        "DoS SYN": {
+          "recall": 0.9966666666666667,
+          "precision": 0.9966666666666667,
+          "f1": 0.9966666666666667
+        },
+        "DoS TCP": {
+          "recall": 1.0,
+          "precision": 0.9966777408637874,
+          "f1": 0.9983361064891847
+        },
+        "DoS UDP": {
+          "recall": 1.0,
+          "precision": 0.9836065573770492,
+          "f1": 0.9917355371900827
+        },
+        "Malformed Data": {
+          "recall": 0.9133333333333333,
+          "precision": 0.9225589225589226,
+          "f1": 0.9179229480737019
+        },
+        "OS Scan": {
+          "recall": 0.7366666666666667,
+          "precision": 0.8983739837398373,
+          "f1": 0.8095238095238095
+        },
+        "Ping Sweep": {
+          "recall": 0.8933333333333333,
+          "precision": 0.9146757679180887,
+          "f1": 0.9038785834738617
+        },
+        "Port Scan": {
+          "recall": 0.8833333333333333,
+          "precision": 0.7934131736526946,
+          "f1": 0.8359621451104101
+        },
+        "Recon VulScan": {
+          "recall": 0.5466666666666666,
+          "precision": 0.7130434782608696,
+          "f1": 0.6188679245283019
+        },
+        "benign": {
+          "recall": 0.8533333333333334,
+          "precision": 0.8050314465408805,
+          "f1": 0.8284789644012945
+        }
+      }
+    }
+  },
+  "unsupervised_models": {
+    "kmeans": {
+      "algorithm": "MiniBatchKMeans",
+      "n_clusters": 18,
+      "silhouette_score": 0.45656093332596903,
+      "avg_purity": 0.5784778129280503,
+      "cluster_purities": [
+        0.49853372434017595,
+        0.4760935910478128,
+        0.3218694885361552,
+        0.4672667757774141,
+        0.5267175572519084,
+        0.501779359430605,
+        0.49710982658959535,
+        0.8344370860927153,
+        0.9368932038834952,
+        0.7381974248927039,
+        0.7918032786885246,
+        0.33972602739726027,
+        0.4391891891891892,
+        0.9422222222222222,
+        0.4888093106535363,
+        0.4181184668989547,
+        0.5789473684210527,
+        0.6148867313915858
+      ]
+    },
+    "dbscan": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2780096541197184,
+      "n_clusters": 16,
+      "noise_points": 455,
+      "noise_percentage": 7.583333333333333
+    }
+  },
+  "model_comparison": {
+    "best_single_model": "XGBoost",
+    "best_accuracy": 0.8835185185185185,
+    "target_achieved": false
+  }
+}
